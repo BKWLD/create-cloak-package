@@ -1,0 +1,8 @@
+{
+	"name": "@cloak-app/<%= name %>",
+	"version": "1.0.0",
+	"description": "<%= description %>",
+	"repository": "git@github.com:BKWLD/cloak-<%= name %>.git",
+	"author": "Bukwild <info@bukwild.com>",
+	"license": "MIT"
+}

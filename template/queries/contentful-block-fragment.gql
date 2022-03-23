@@ -1,0 +1,4 @@
+# Fetch a <%= name %> block
+fragment <%= name %>Block on Block<%= studlyName %> {
+	# Fields go here
+}

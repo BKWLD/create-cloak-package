@@ -1,0 +1,4 @@
+# Fetch a <%= name %> block
+fragment <%= name %>Block on blocks_<%= name %>_BlockType {
+	# Fields go here
+}
