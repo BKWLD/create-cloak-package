@@ -3,7 +3,7 @@
 <%= description %>  [View demo](https://cloak-<%= name %>.netlify.app/).
 
 ```vue
-<cloak-<%= name % />
+<cloak-<%= name %> />
 ```
 
 ## Install
