@@ -87,7 +87,7 @@ module.exports =
 
 		# Show completion steps
 		logBanner 'Done! Time for next steps:'
-		logStep 'Run example demo', "cd #{@outDir}/demo && yarn dev"
+		logStep 'Run example demo', "cd '#{@outDir}/demo' && yarn dev"
 		console.log ''
 
 # Add a banner
