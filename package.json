@@ -5,6 +5,7 @@
   "repository": "git@github.com:BKWLD/create-cloak-package.git",
   "author": "Bukwild <info@bukwild.com>",
   "license": "MIT",
+  "bin": "./cli.js",
   "dependencies": {
     "@expo/spawn-async": "^1.6.0",
     "chalk": "^2.4.1",
