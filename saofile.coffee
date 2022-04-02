@@ -9,9 +9,12 @@ module.exports =
 
 		{ # Get the package name
 			name: 'name'
-			message: 'Package name (kebab-case w/o org prefix)'
+			message: 'Package name'
 			default: @outFolder
-			validate: (name) -> !!name and !name.match /@/
+			validate: (name) -> !!name
+			filter: (name) -> new Promise (resolve) ->
+				return resolve('') unless name
+				resolve name.replace /^(@cloak\-app\/|cloak\-)/, ''
 		}
 
 		{ # Get the package description
