@@ -1,6 +1,17 @@
 # create-cloak-package
 
-Scaffolds a package intended for re-use in Cloak apps.  See [Cloak Package Approach](https://bukwild.slab.com/posts/cloak-package-approach-arp4lcrr) for more info.  This includes a functional demo project that you can use for building your package in isolation.
+Scaffolds a package intended for re-use in Cloak apps.  See [Cloak Package Approach](https://bukwild.slab.com/posts/cloak-package-approach-arp4lcrr) for more info.
+
+## Usage
+
+From the directory you want to create the new Cloak app:
+
+```
+yarn create cloak-package
+```
+
+This will ask you a couple of questions, copy files from the [template](./template), init a new git repo, and run initial install commands.  This incluces setting up a demo Cloak project that you can use to develop your package with.
+
 
 ## Contributing
 
