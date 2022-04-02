@@ -1,5 +1,7 @@
 camelCase = require 'lodash/camelCase'
 upperFirst = require 'lodash/upperFirst'
+spawnAsync = require '@expo/spawn-async'
+chalk = require 'chalk'
 module.exports =
 
 	# The questions asked of the user
@@ -59,5 +61,40 @@ module.exports =
 
 	# Things that run after fiels are copied over
 	completed: ->
+
+		# Make a spawn helpers
+		spawn = (cmd, args, cwd = @outDir) => spawnAsync cmd, args,
+			stdio: 'inherit'
+			cwd: cwd
+		spawnDemo = (cmd, args) => spawn cmd, args, "#{@outDir}/demo"
+
+		# Init git repo
 		@gitInit()
+
+		# Install yarn deps
 		await @npmInstall()
+
+		# Install demo dependencies
+		await spawnDemo 'yarn'
+
+		# Link package for use in demo
+		await spawn 'yarn', ['link']
+		await spawnDemo 'yarn', ['link', "@cloak-app/#{@answers.name}"]
+
+		# Show completion steps
+		logBanner 'Done! Time for next steps:'
+		logStep 'Run Hello World', "cd #{@outDir}/demo && yarn dev"
+		console.log ''
+
+# Add a banner
+logBanner = (text, color = 'green') ->
+	console.log ''
+	console.log chalk[color]('-'.repeat(text.length))
+	console.log chalk[color](text)
+	console.log chalk[color]('-'.repeat(text.length))
+
+# Log a link
+logStep = (label, step) ->
+	console.log ''
+	console.log chalk.bold label
+	if step then console.log chalk.italic step
