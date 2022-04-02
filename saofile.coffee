@@ -27,8 +27,20 @@ module.exports =
 	# Massage input data
 	templateData: ->
 
+		# Make a camelCase version of the name
+		camelName: camelCase @answers.name
+
 		# Make a StudlyCase version of name
 		studlyName: upperFirst camelCase @answers.name
+
+		# Make the full package name
+		packageName: "@cloak-app/#{@answers.name}"
+
+		# Make the repo path
+		repoPath: "BKWLD/cloak-#{@answers.name}"
+
+		# Make component names
+		blockComponentName: "cloak-#{@answers.name}-block"
 
 	# Setup the template manipulation actions
 	actions: -> [

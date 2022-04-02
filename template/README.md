@@ -1,4 +1,4 @@
-# @cloak-app/<%= name %>
+# <%= packageName %>
 
 <%= description %>  [View demo](https://cloak-<%= name %>.netlify.app/).
 
@@ -8,8 +8,8 @@
 
 ## Install
 
-1. Install with `yarn add @cloak-app/<%= name %>`
-2. Add to `nuxt.config` with `buildModules: ['@cloak-app/<%= name %>/nuxt']`
+1. Install with `yarn add <%= packageName %>`
+2. Add to `nuxt.config` with `buildModules: ['<%= packageName %>/nuxt']`
 
 ### Project Dependencies
 

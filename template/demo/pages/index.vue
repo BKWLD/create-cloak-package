@@ -1,31 +1,32 @@
-<!-- Renders a <%= name %> block -->
+<!-- Demo homepage -->
 
 <template lang='pug'>
 
-section.<%= name %>-block(:class='classes')
-	| Heya world
+nuxt-content(:document='page')
 
 </template>
 
 <!-- ––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––– -->
 
 <script lang='coffee'>
+import pageMixin from '@bkwld/cloak/mixins/page'
 export default
 
-	props:
+	mixins: [ pageMixin ]
 
-		# The max-width class
-		maxWidthClass:
-			type: String
-			default: -> @$config.cloak?.<%= camelName %>?.blockMaxWidthClass || ''
-
-	computed:
-
-		# Root classes
-		classes: -> @maxWidthClass
+	# Get page content
+	asyncData: ({ app, params, $content }) ->
+		page = await $content('demo').fetch()
+		return { page }
 
 </script>
 
 <!-- ––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––– -->
 
-<style lang='stylus' scoped></style>
+<style lang='stylus' scoped>
+
+h2
+	margin-top 2em
+	margin-bottom 0.5em
+
+</style>

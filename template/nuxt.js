@@ -2,7 +2,7 @@ import { join } from 'path'
 export default function() {
 
 	// Have Nuxt transpile resources
-	this.options.build.transpile.push('@cloak-app/<%= name %>')
+	this.options.build.transpile.push('<%= packageName %>')
 
 	// Allow components to be auto-imported by Nuxt
 	this.nuxt.hook('components:dirs', dirs => {
@@ -23,9 +23,9 @@ export default function() {
 	// Relay package options to runtime config
 	this.options.publicRuntimeConfig.cloak = {
 		...this.options.publicRuntimeConfig.cloak,
-		<%= name %>: {
+		<%= camelName %>: {
 			blockMaxWidthClass: 'max-w',
-			...this.options.cloak?.<%= name %>,
+			...this.options.cloak?.<%= camelName %>,
 		}
 	}
 }

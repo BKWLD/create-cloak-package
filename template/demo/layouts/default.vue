@@ -1,9 +1,9 @@
-<!-- Renders a <%= name %> block -->
+<!-- General layout -->
 
 <template lang='pug'>
 
-section.<%= name %>-block(:class='classes')
-	| Heya world
+.default-layout.max-w
+	nuxt.page
 
 </template>
 
@@ -11,21 +11,15 @@ section.<%= name %>-block(:class='classes')
 
 <script lang='coffee'>
 export default
-
-	props:
-
-		# The max-width class
-		maxWidthClass:
-			type: String
-			default: -> @$config.cloak?.<%= camelName %>?.blockMaxWidthClass || ''
-
-	computed:
-
-		# Root classes
-		classes: -> @maxWidthClass
+	name: 'DefaultLayout'
 
 </script>
 
 <!-- ––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––– -->
 
-<style lang='stylus' scoped></style>
+<style lang='stylus' scoped>
+
+.page
+	padding-v 2em
+
+</style>

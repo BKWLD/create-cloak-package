@@ -1,8 +1,8 @@
 {
-	"name": "@cloak-app/<%= name %>",
+	"name": "<%= packageName %>",
 	"version": "1.0.0",
 	"description": "<%= description %>",
-	"repository": "git@github.com:BKWLD/cloak-<%= name %>.git",
+	"repository": "git@github.com:<%= repoPath %>.git",
 	"author": "Bukwild <info@bukwild.com>",
 	"license": "MIT"
 }
