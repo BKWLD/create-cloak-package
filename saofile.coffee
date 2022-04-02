@@ -59,6 +59,7 @@ module.exports =
 			type: 'move'
 			patterns:
 				'_gitignore': '.gitignore'
+				'_npmignore': '.npmignore'
 		}
 	]
 
