@@ -1,15 +1,12 @@
-// Use Cloak to make boilerplate
-import { mergeConfig, makeBoilerplate } from '@bkwld/cloak'
-const boilerplate = makeBoilerplate({
-	siteName: '<%= packageName %> demo',
-	cms: '@nuxt/content',
-})
-
 // Nuxt config
-export default mergeConfig(boilerplate, {
+export default {
 
-	// Load this package
-	buildModules: ['<%= packageName %>/nuxt'],
+	// Load this boilerplate and this package
+	buildModules: [
+		'@cloak-app/boilerplate/nuxt',
+		'@cloak-app/demo-theme/nuxt',
+		'<%= packageName %>/nuxt',
+	],
 
 	// Example settings
 	cloak: {
@@ -18,19 +15,6 @@ export default mergeConfig(boilerplate, {
 		}
 	},
 
-	// Load CMS module
+	// @nuxt/content can't be loaded from module
 	modules: ['@nuxt/content'],
-
-	// @nuxt/content config
-	content: {
-		liveEdit: false
-	},
-
-	// Enable dev tools in prod
-	vue: {
-		config: {
-			productionTip: false,
-			devtools: true
-		}
-	},
-})
+}

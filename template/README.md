@@ -1,6 +1,11 @@
 # <%= packageName %>
 
-<%= description %>  [View demo](https://cloak-<%= name %>.netlify.app/).
+<%= description %>
+
+- [View demo](https://cloak-<%= name %>.netlify.app)
+- [Edit CodeSandbox](https://githubbox.com/<%= repoPath %>)
+
+## Usage
 
 ```vue
 <cloak-<%= name %> />
@@ -28,3 +33,7 @@ Renders a Block to be used within a Tower.
 
 - props:
   - `maxWidthClass` - A `max-w-*` class to apply to the block
+
+## Contributing
+
+Run `yarn dev` to open a Nuxt dev build of [the demo directory](./demo).

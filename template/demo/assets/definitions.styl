@@ -7,6 +7,7 @@ json('vars/breakpoints.json')
 json('vars/dimensions.json')
 json('vars/colors.json')
 
+
 // Whitespace
 gutter = 60px
 gutter-mobile = 20px
@@ -27,6 +28,10 @@ btn-pad-h = 30px
 btn-pad-h-min = 30px
 btn-pad-h-small = 20px
 
+// Input sizing
+input-h = btn-desktop-h
+input-h-min = btn-mobile-h
+
 // Typography
 body-font-size = 16px
 body-font-size-min = 14px
@@ -43,6 +48,14 @@ spacing-s = 30px
 spacing-s-min = spacing-s * 0.8
 spacing-xs = 15px
 spacing-xs-min = spacing-xs * 0.9
+spacing-xxs = 8px
+spacing-xxs-min = spacing-xxs * 0.9
+
+// UI
+card-radius = 5px
+
+// Animation
+base-speed = 200ms
 
 /**
  * Vendor
@@ -105,3 +118,12 @@ fluid-space(property, size, negative = false)
 	fluid property,
 		mod * lookup('spacing-'+size),
 		mod * lookup('spacing-'+size+'-min')
+
+// separate header media queries
+// because header breaks at a unique width
+when-desktop-header()
+	@media(min-width header-break + 1px)
+		{block}
+when-mobile-header()
+	@media(max-width header-break)
+		{block}
