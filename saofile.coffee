@@ -87,7 +87,24 @@ module.exports =
 
 		# Show completion steps
 		logBanner 'Done! Time for next steps:'
-		logStep 'Run example demo', "cd '#{@outDir}/demo' && yarn dev"
+
+		# Show how to run demo
+		logStep 'Run example demo', "(cd '#{@outDir}' && yarn dev)"
+
+		# Show how to create GitHub app
+		logStep 'Create & push to new GitHub repo', """
+gh repo create\\
+  -d="Standard theme for @cloak-app package demos."\\
+  -h="https://cloak-#{@answers.name}.netlify.app"\\
+	--source="#{@outDir}"\\
+  --push --public\\
+  BKWLD/cloak-#{@answers.name}
+"""
+
+		# Show how to push to Netlify
+		logStep 'Create Netlify demo site', "(cd #{@outDir} && netlify init)"
+
+		# Add a trailing space
 		console.log ''
 
 # Add a banner
