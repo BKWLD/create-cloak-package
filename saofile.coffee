@@ -93,12 +93,15 @@ module.exports =
 
 		# Show how to create GitHub app
 		logStep 'Create & push to new GitHub repo', """
-gh repo create\\
-  -d="Standard theme for @cloak-app package demos."\\
-  -h="https://cloak-#{@answers.name}.netlify.app"\\
-	--source="#{@outDir}"\\
-  --push --public\\
-  BKWLD/cloak-#{@answers.name}
+(cd '#{@outDir}' && \\
+  git add . && \\
+	git commit am 'Initial commit via create-cloak-package' && \\
+  gh repo create \\
+    -d="Standard theme for @cloak-app package demos." \\
+    -h="https://cloak-#{@answers.name}.netlify.app" \\
+    --source="#{@outDir}" \\
+    --push --public \\
+    BKWLD/cloak-#{@answers.name})
 """
 
 		# Show how to push to Netlify
