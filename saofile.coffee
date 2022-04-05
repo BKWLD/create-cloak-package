@@ -105,7 +105,7 @@ module.exports =
 """
 
 		# Show how to push to Netlify
-		logStep 'Create Netlify demo site', "(cd #{@outDir} && netlify init)"
+		logStep 'Create Netlify demo site', "(cd '#{@outDir}' && netlify init)"
 
 		# Add a trailing space
 		console.log ''
