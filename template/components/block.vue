@@ -29,7 +29,7 @@ export default
 
 <style lang='stylus' scoped>
 
-.example-block
+.<%= name %>-block
 	border 1px dashed currentColor
 	padding 1em
 	margin-v 1em
