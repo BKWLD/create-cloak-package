@@ -95,9 +95,9 @@ module.exports =
 		logStep 'Create & push to new GitHub repo', """
 (cd '#{@outDir}' && \\
   git add . && \\
-	git commit am 'Initial commit via create-cloak-package' && \\
+  git commit -m 'Initial commit' && \\
   gh repo create \\
-    -d="Standard theme for @cloak-app package demos." \\
+    -d="#{@answers.description}" \\
     -h="https://cloak-#{@answers.name}.netlify.app" \\
     --source="#{@outDir}" \\
     --push --public \\
