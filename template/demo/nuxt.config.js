@@ -1,15 +1,22 @@
 // Nuxt config
 export default {
 
-	// Load this boilerplate and this package
+	// Load boilerplate and this package's module
 	buildModules: [
 		'@cloak-app/boilerplate/nuxt',
 		'@cloak-app/demo-theme/nuxt',
 		'../nuxt',
 	],
 
-	// Example settings
+	// Cloak settings
 	cloak: {
+
+		// Boilerplate settings
+		boilerplate: {
+			siteName: '<%= packageName %> demo',
+		},
+
+		// Example settings for this package
 		<%= camelName %>: {
 			blockMaxWidthClass: 'max-w',
 		}
