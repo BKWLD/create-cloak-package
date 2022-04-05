@@ -2,8 +2,7 @@
 
 <template lang='pug'>
 
-section.<%= name %>-block(:class='classes')
-	| Heya world
+section.<%= name %>-block(:class='classes') Heya world
 
 </template>
 
@@ -28,4 +27,11 @@ export default
 
 <!-- ––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––– -->
 
-<style lang='stylus' scoped></style>
+<style lang='stylus' scoped>
+
+.example-block
+	border 1px dashed currentColor
+	padding 1em
+	margin-v 1em
+
+</style>
