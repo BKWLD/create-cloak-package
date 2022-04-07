@@ -20,13 +20,19 @@ export default function() {
 		})
 	})
 
-	// Relay package options to runtime config
-	this.options.publicRuntimeConfig.cloak = {
-		...this.options.publicRuntimeConfig.cloak,
+	// Set default options
+	this.options.cloak = {
+		...this.options.cloak,
 		<%= camelName %>: {
 			blockMaxWidthClass: 'max-w',
 			...this.options.cloak?.<%= camelName %>,
 		}
+	}
+
+	// Relay package options to runtime config
+	this.options.publicRuntimeConfig.cloak = {
+		...this.options.publicRuntimeConfig.cloak,
+		<%= camelName %>: this.options.cloak?.<%= camelName %>,
 	}
 }
 
