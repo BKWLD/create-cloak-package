@@ -8,7 +8,7 @@
 ## Install
 
 1. Install with `yarn add <%= packageName %>`
-2. Add to `nuxt.config` with `buildModules: ['<%= packageName %>/nuxt']`
+2. Add to `nuxt.config` with `buildModules: ['<%= packageName %>']`
 
 ### Project Dependencies
 
