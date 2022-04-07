@@ -5,12 +5,6 @@
 - [View demo](https://cloak-<%= name %>.netlify.app)
 - [Edit CodeSandbox](https://githubbox.com/<%= repoPath %>)
 
-## Usage
-
-```vue
-<cloak-<%= name %> />
-```
-
 ## Install
 
 1. Install with `yarn add <%= packageName %>`
@@ -25,9 +19,11 @@
 - `cloak.<%= name %>:`
   - `maxWidthClass` - The default max-width class to use for the block.
 
-## Components
+## Usage
 
-### `cloak-<%= name %>-block`
+### Components
+
+`<cloak-<%= name %>-block />`
 
 Renders a Block to be used within a Tower.
 
