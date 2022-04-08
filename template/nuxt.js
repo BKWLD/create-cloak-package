@@ -22,7 +22,7 @@ export default function() {
 	})
 
 	// Set default options
-	setPublicDefaultOptions(this.options, '<%= camelName %>', {
+	setPublicDefaultOptions(this, '<%= camelName %>', {
 		blockMaxWidthClass: 'max-w'
 	})
 }
