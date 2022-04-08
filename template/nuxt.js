@@ -1,4 +1,5 @@
 import { join } from 'path'
+import { setPublicDefaultOptions } from '@cloak-app/utils'
 export default function() {
 
 	// Have Nuxt transpile resources
@@ -21,19 +22,9 @@ export default function() {
 	})
 
 	// Set default options
-	this.options.cloak = {
-		...this.options.cloak,
-		<%= camelName %>: {
-			blockMaxWidthClass: 'max-w',
-			...this.options.cloak?.<%= camelName %>,
-		}
-	}
-
-	// Relay package options to runtime config
-	this.options.publicRuntimeConfig.cloak = {
-		...this.options.publicRuntimeConfig.cloak,
-		<%= camelName %>: this.options.cloak?.<%= camelName %>,
-	}
+	setPublicDefaultOptions(this.options, '<%= camelName %>', {
+		blockMaxWidthClass: 'max-w'
+	})
 }
 
 // Required for published modules
