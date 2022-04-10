@@ -1,6 +1,6 @@
 {
   "name": "create-cloak-package",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "Scaffolds a package intended for re-use in Cloak apps.",
   "repository": "git@github.com:BKWLD/create-cloak-package.git",
   "author": "Bukwild <info@bukwild.com>",
