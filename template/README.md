@@ -10,14 +10,15 @@
 1. Install with `yarn add <%= packageName %>`
 2. Add to `nuxt.config` with `buildModules: ['<%= packageName %>']`
 
+### Module Options
+
+Set these properties within `cloak: { <%= name %>: { ... } }` in the nuxt.config.js:
+
+- `maxWidthClass` - The default max-width class to use for the block.
+
 ### Project Dependencies
 
 - `.max-w*` styles (included in Cloak via `whitespace.styl`)
-
-### Module Options
-
-- `cloak.<%= name %>:`
-  - `maxWidthClass` - The default max-width class to use for the block.
 
 ## Usage
 
