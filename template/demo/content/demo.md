@@ -8,5 +8,5 @@ Additional details of the feature
 
 
 ```vue
-<<%= blockComponentName %>></<%= blockComponentName %>>
+<<%= blockComponentName %>/>
 ```
