@@ -13,15 +13,15 @@ export default
 
 	props:
 
-		# The max-width class
-		maxWidthClass:
+		# Combines horizontal padding and max-width rules
+		maxWidth:
 			type: String
-			default: -> @$config.cloak?.<%= camelName %>?.blockMaxWidthClass || ''
+			default: -> @$config.cloak?.<%= camelName %>?.blockMaxWidth || ''
 
 	computed:
 
 		# Root classes
-		classes: -> @maxWidthClass
+		classes: -> @maxWidth # Expect to match a CSS class
 
 </script>
 

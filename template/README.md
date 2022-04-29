@@ -14,7 +14,7 @@
 
 Set these properties within `cloak: { <%= name %>: { ... } }` in the nuxt.config.js:
 
-- `maxWidthClass` - The default max-width class to use for the block.
+- `blockMaxWidth` - A string that should match a global CSS class that adds horizontal `padding` and a `max-width` to the block component.  Defaults to `max-w`.
 
 ### Project Dependencies
 
@@ -29,7 +29,7 @@ Set these properties within `cloak: { <%= name %>: { ... } }` in the nuxt.config
 Renders a Block to be used within a Tower.
 
 - props:
-  - `maxWidthClass` - A `max-w-*` class to apply to the block
+  - `maxWidth` - A string that should match a global CSS class that adds horizontal `padding` and a `max-width` to the block component.  Defaults to `max-w`.
 
 ## Contributing
 
