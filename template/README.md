@@ -24,7 +24,7 @@ Set these properties within `cloak: { <%= name %>: { ... } }` in the nuxt.config
 
 ### Components
 
-`<cloak-<%= name %>-block />`
+`<cloak-<%= name %>-block/>`
 
 Renders a Block to be used within a Tower.
 
