@@ -22,6 +22,9 @@ export default {
 		}
 	},
 
+	// Always show logs (doesn't work from within module)
+	build: { quiet: false },
+
 	// @nuxt/content can't be loaded from module
 	modules: ['@nuxt/content'],
 }
